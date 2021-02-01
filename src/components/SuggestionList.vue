@@ -11,14 +11,20 @@
 <script>
 export default {
   props: ['match'],
-  data(){ return {
-    color: ['red','green','blue'] // Change this to a vuex getter that filters based on this.match
-  }},
+
+  computed: {
+    colors() {
+      return this.$store.getters.pickColor(this.match)
+    }
+  }
 }
 </script>
 
 <style scoped lang="scss">
 ul{
   position: absolute;
+}
+li:hover {
+  cursor: grab;
 }
 </style>

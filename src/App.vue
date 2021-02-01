@@ -7,6 +7,7 @@
 
 <script>
 import SuggestionList from '@/components/SuggestionList'
+// import {mapState} from 'vue'
 
 export default {
   name: 'App',
@@ -15,6 +16,11 @@ export default {
     text: "",
     backgroundColor: ""
   }},
+
+  // computed:
+  //   mapState({
+  //     colors: state => state.getters.pickColor('blue')
+  //   })
 }
 </script>
 
